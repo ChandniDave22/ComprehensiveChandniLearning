@@ -1,0 +1,599 @@
+{
+	"info": {
+		"_postman_id": "8ff8d21a-5767-4f0f-bb3e-f8e15f597439",
+		"name": "Postman Assignment 8",
+		"description": "It contains positive and negative test of api under test for SDET Basic Comprehensive assignment.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30468290"
+	},
+	"item": [
+		{
+			"name": "postive test",
+			"item": [
+				{
+					"name": "Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"    // make an assertion",
+									"    // if your assertion throws an error, this test will fail",
+									"    pm.response.to.have.status(200);",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response is ok\", function () {",
+									"    pm.response.to.be.ok;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response Json format",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response is in json format\", function () {",
+									"    pm.response.to.be.json;",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response time",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 550ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(550);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response content type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Content-Type header is application/json\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/json');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response Body",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response Body is empty\", () => {",
+									"  const responseJson = pm.response.json();",
+									"  pm.expect(responseJson).to.eql([]);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON schema v4 validation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"const schema = {",
+									" \"items\": {",
+									" \"type\": \"boolean\"",
+									" }",
+									"};",
+									"const data1 = [true, false];",
+									"",
+									"pm.test('Schema is valid', function() {",
+									"  pm.expect(tv4.validate(data1, schema)).to.be.true;",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains all the positive test for the API under test.",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Negative test",
+			"item": [
+				{
+					"name": "Status Fail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200 - pm.expect with fail status\", function () {",
+									"    pm.expect(pm.response.code).to.be.oneOf([400, 500, 300]); //written to fail",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response not OK",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Using a 2nd optional parameter with the pm.expect function to create a custom error message ",
+									"pm.test(\"Using a custom error message\", function () {",
+									"    pm.expect(false, 'response ok').to.be.ok;",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response content type xml",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Content-Type header is application/xml\", () => {",
+									"  pm.expect(pm.response.headers.get('Content-Type')).to.eql('application/xml');",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Response Body has some content",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response Body is empty\", () => {",
+									"  const responseJson = pm.response.json();",
+									"  pm.expect(responseJson).to.eql(\"\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON schema v4 validation fail",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var schema = {",
+									"  \"items\": {",
+									"    \"type\": \"boolean\"",
+									"  }",
+									"};",
+									"",
+									"var data2 = [true, 123];",
+									"",
+									"pm.test('Schema is valid', function() {",
+									"   pm.expect(tv4.validate(data2, schema)).to.be.true; // this statement would not be true",
+									"});",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok as delete is not allowed\", function () {",
+									"    pm.response.to.have.status(405);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://universities.hipolabs.com/search?country=Unites+States",
+							"protocol": "http",
+							"host": [
+								"universities",
+								"hipolabs",
+								"com"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "country",
+									"value": "Unites+States"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains all the negative test for the API under test."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
