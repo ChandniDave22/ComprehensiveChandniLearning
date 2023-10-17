@@ -1,5 +1,5 @@
 # ComprehensiveChandniLearning
-repository can be cloned using beow command
+repository can be cloned using command: 
 git clone https://github.com/ChandniDave22/ComprehensiveChandniLearning.git
 
 This repository contains different assignment in 'main' branch.
