@@ -14,3 +14,8 @@ Below is Assignment no. and assignment folder name, every assignment folder has 
 8. Assignment 8 = postman_assignment_8
 9. Assignment 9 = jmeter_assignment_9
 10. Assignment 10 = pythonassignment10
+
+Notes:
+1. Tools & Technology used for this assignment: Java 11, git, eclipse, maven, testng, selenium 3, selenium 4, python 3.11.4, pycharm, postman, jmeter.
+2. For java selenium project it is required to add selenium jar in the library.
+3. For Python selenium project it is required to put chromebrowser driver file in a directory that is already listed in the PATH or can add it in the PATH
